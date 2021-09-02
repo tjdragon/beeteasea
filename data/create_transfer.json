@@ -1,0 +1,7 @@
+{
+  "from_account_id": "id",
+  "from_wallet_id": "",
+  "beneficiary_address": "",
+  "transfer_amount": 12345,
+  "transfer_fee": 12345
+}
