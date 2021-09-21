@@ -146,7 +146,7 @@ The total spendable amount for that UTXO is 1552063 (sum of all 'amount' in the 
 - See
   the [result](https://live.blockcypher.com/btc-testnet/tx/5abed1619afdb71ac0058dd6abc28763c4691802a49f54c73f4559ce1deaf699/)
 
-## [P2SH](./demos/test_p2sh.py) sample
+## [P2SH](./demos/test_p2sh.py) example
 
 Code can be seen under folder [demos](./demos)
 
@@ -161,7 +161,7 @@ curl --data '{"jsonrpc":"2.0","method":"scantxoutset","params":["start", ["addr(
 - See
   the [result](https://live.blockcypher.com/btc-testnet/tx/8d6dc6d684201ea6d505ede63c36482c410a173d31133400f73ddac14f62ff31/)
 
-## [P2WPKH](./demos/test_from_p2wpkh.py) sample (from Segwit to P2PKH)
+## [P2WPKH](./demos/test_from_p2wpkh.py) example (from Segwit to P2PKH)
 
 Code can be seen under folder [demos](./demos)
 
@@ -175,19 +175,39 @@ curl --data '{"jsonrpc":"2.0","method":"scantxoutset","params":["start", ["addr(
 - See
   the [result](https://live.blockcypher.com/btc-testnet/tx/ee25841641dba335fe8d4eb62d58354301c6e28b2bc7c6802b1ef187d6662dab/)
 
-## [P2WPKH](./demos/test_to_p2wpkh.py) sample (from P2PKH to Segwit)
+## [P2WPKH](./demos/test_to_p2wpkh.py) example (from P2PKH to Segwit)
 
 Code can be seen under folder [demos](./demos)
 
 - See
   the [result](https://live.blockcypher.com/btc-testnet/tx/d2c897cdc9494791b34622671c3a8ded2d6b32a6e5e0d57562385b7839c15406/)
 
-## [P2WPKH](./demos/test_seg_to_seg.py) sample (from Segwit to Segwit)
+## [P2WPKH](./demos/test_seg_to_seg.py) example (from Segwit to Segwit)
 
 Code can be seen under folder [demos](./demos)
 
 - See
   the [result](https://live.blockcypher.com/btc-testnet/tx/2f141299678eec472e72afcfeb08ecb82fc4b582fc8435aed578793c79cd6ea5/)
+
+## [P2SH with Meta Data](./demos/test_p2sh_2_in_meta.py) example
+
+This one allows you to add metadata to a transaction, such as a travel rule reference id or any off-chain reference id.  
+The transaction built can be decoded, and the decoded json part showing the metadata looks like:
+
+```json
+ {
+  "addresses": null,
+  "data_hex": "5452502d5245462d546869657272792d3132333435",
+  "data_string": "TRP-REF-Thierry-12345",
+  "script": "6a155452502d5245462d546869657272792d3132333435",
+  "script_type": "null-data",
+  "value": 0
+}
+```
+
+You can also check out this [link](https://live.blockcypher.com/btc-testnet/tx/a4de25742c327a55641527ec4bf1495aa7c8256fb2701d8905bae38662dd2b9c/) that shows:
+
+![TRP Ref](./data/trpbtc.png "TRP Ref")
 
 ## Send the tx via curl
 
