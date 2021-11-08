@@ -1,5 +1,7 @@
 # Project BeeTeaSea: Bitcoin Transaction Building Investigations
 
+If you like what you see, please donate some BTC to bc1qf3gsvfk0yp9fvw0k8xvq7a8dk80rqw0apcy8kx or some ETH to 0x7e674C55f954d31B2f86F69d7A58B2BCe84Cf6b4
+
 ## Resting on the shoulders of giants
 
 I started investigating various libraries to understand the internals of Bitcoin Transaction Building.  
