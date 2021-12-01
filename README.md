@@ -1,5 +1,7 @@
 # Project BeeTeaSea: Bitcoin Transaction Building Investigations
 
+If you like what you see, please donate some BTC to bc1qf3gsvfk0yp9fvw0k8xvq7a8dk80rqw0apcy8kx or some ETH to 0x7e674C55f954d31B2f86F69d7A58B2BCe84Cf6b4
+
 ## Resting on the shoulders of giants
 
 I started investigating various libraries to understand the internals of Bitcoin Transaction Building.  
@@ -9,7 +11,7 @@ is [https://pypi.org/project/bitcoin-utils/](https://pypi.org/project/bitcoin-ut
 I think the author is [Konstantinos Karasavvas](https://www.linkedin.com/in/kkarasavvas/), with also a
 great [PDF](https://github.com/karask/bitcoin-textbook) I highly recommend.
 
-This is a tutorial to learn - implementation is likely to be buggy. Teach others, teach yourself.
+This is a tutorial to learn - implementation is likely to be buggy. Learn from others, teach others, teach yourself.
 
 ## Prerequisites
 
