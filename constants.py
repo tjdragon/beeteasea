@@ -15,3 +15,6 @@ PRIVATE_KEY_COMPRESSED_PUBKEY = b'\x01'
 NETWORK_SEGWIT_PREFIXES = {'mainnet': 'bc',
                            'testnet': 'tb',
                            'regtest': 'bcrt'}
+NETWORK_P2SH_PREFIXES = { 'mainnet': b'\x05',
+                          'testnet': b'\xc4',
+                          'regtest': b'\xc4' }

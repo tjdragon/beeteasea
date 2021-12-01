@@ -12,7 +12,7 @@ from binascii import hexlify, unhexlify
 import base58check
 import bech32 as bech32
 
-from constants import NETWORK_SEGWIT_PREFIXES
+from constants import NETWORK_SEGWIT_PREFIXES, NETWORK_P2SH_PREFIXES
 from script import BTCScript
 
 
@@ -53,6 +53,17 @@ class AddressP2SH:
 
     def to_p2sh_script_pub_key(self):
         return BTCScript(['OP_HASH160', self.hash160, 'OP_EQUAL'])
+
+    def to_string(self):
+        hash160_encoded = self.to_hash160()
+        hash160_bytes = unhexlify(hash160_encoded)
+        data = NETWORK_P2SH_PREFIXES['testnet'] + hash160_bytes
+
+        data_hash = hashlib.sha256(hashlib.sha256(data).digest()).digest()
+        checksum = data_hash[0:4]
+        address_bytes = base58check.b58encode(data + checksum)
+
+        return address_bytes.decode('utf-8')
 
 
 class AddressP2WPKH:

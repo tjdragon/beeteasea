@@ -103,6 +103,11 @@ class KeyMaterial:
         addr_string_hex = hexlify(hash160).decode('utf-8')
         return AddressP2PKH(hash160=addr_string_hex)
 
-# km  = KeyMaterial()
-# wif = km.to_wif()
-# adr = km.address()
+# # km  = KeyMaterial()
+# # wif = km.to_wif()
+# # adr = km.address()
+#
+# km = KeyMaterial(from_kdp=KDP('BTC', 0, 5, 0))
+# adr_adr = km.address()
+# adr_seg = km.segwit_address().to_string()
+# adr_p2p = km.p2pkh().to_string()

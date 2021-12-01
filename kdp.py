@@ -41,6 +41,3 @@ class KDP:
 
     def path(self) -> str:
         return self.kdp
-
-# kdp_test_1 = KDP('BTC', 0, 5, 0)
-# print("{}".format(kdp_test_1.kdp))
